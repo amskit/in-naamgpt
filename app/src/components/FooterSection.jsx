@@ -11,7 +11,7 @@ export default function FooterSection() {
               <div className="w-4 h-4 rounded-full bg-bh-red" />
               <div className="w-4 h-4 bg-bh-blue" />
               <div style={{ width: 0, height: 0, borderLeft: '8px solid transparent', borderRight: '8px solid transparent', borderBottom: '14px solid #F0C020' }} />
-              <span className="font-heading font-black text-xl uppercase tracking-tight ml-2">in-microGPT</span>
+              <span className="font-heading font-black text-xl uppercase tracking-tight ml-2">in-naamGPT</span>
             </div>
             <p className="text-white/50 text-sm max-w-sm leading-relaxed">
               A tiny GPT trained on Hindi names in pure Python. Based on{' '}
