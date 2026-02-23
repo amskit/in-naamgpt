@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Bauhaus Palette */
+  --color-bh-bg: #F0F0F0;
+  --color-bh-fg: #121212;
+  --color-bh-red: #D02020;
+  --color-bh-blue: #1040C0;
+  --color-bh-yellow: #F0C020;
+  --color-bh-white: #FFFFFF;
+  --color-bh-muted: #E0E0E0;
+  --color-bh-black: #121212;
+
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bh-bg);
+    color: var(--color-bh-fg);
+    font-family: var(--font-body);
+    font-weight: 500;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-bh-yellow);
+    color: var(--color-bh-black);
+  }
+}
+
+/* Bauhaus Shadows */
+.shadow-bh-sm { box-shadow: 3px 3px 0px 0px #121212; }
+.shadow-bh { box-shadow: 4px 4px 0px 0px #121212; }
+.shadow-bh-md { box-shadow: 6px 6px 0px 0px #121212; }
+.shadow-bh-lg { box-shadow: 8px 8px 0px 0px #121212; }
+
+/* Colored hard shadows */
+.shadow-bh-red { box-shadow: 4px 4px 0px 0px #D02020; }
+.shadow-bh-blue { box-shadow: 4px 4px 0px 0px #1040C0; }
+.shadow-bh-yellow { box-shadow: 4px 4px 0px 0px #F0C020; }
+
+/* Dot pattern */
+.pattern-dots {
+  background-image: radial-gradient(#121212 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  opacity: 0.06;
+}
+
+/* Section divider */
+.section-divider {
+  border-bottom: 4px solid #121212;
+}
+
+/* Button press effect */
+.btn-press {
+  transition: all 200ms ease-out;
+}
+.btn-press:active {
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 200ms ease-out;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Geometric decorations */
+.geo-circle {
+  width: 12px; height: 12px;
+  border-radius: 9999px;
+}
+.geo-square {
+  width: 12px; height: 12px;
+  border-radius: 0;
+}
+.geo-triangle {
+  width: 0; height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid currentColor;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.15s !important;
+  }
+}

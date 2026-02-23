@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vercel/
+*.pkl
+__pycache__/
+*.pyc
+.DS_Store
+model/data/scraped_names_raw.txt
