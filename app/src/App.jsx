@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import FloatingShapes from './components/FloatingShapes'
 import HeroSection from './components/HeroSection'
 import NameCloudSection from './components/NameCloudSection'
@@ -6,11 +6,19 @@ import TokenizationSection from './components/TokenizationSection'
 import EmbeddingSection from './components/EmbeddingSection'
 import AttentionSection from './components/AttentionSection'
 import LossGradientSection from './components/LossGradientSection'
-import TrainingSection from './components/TrainingSection'
+const TrainingSection = lazy(() => import('./components/TrainingSection'))
 import GeneratorSection from './components/GeneratorSection'
 import HowItWorksSection from './components/HowItWorksSection'
 import ArchitectureSection from './components/ArchitectureSection'
 import FooterSection from './components/FooterSection'
+
+function SectionFallback() {
+  return (
+    <div className="py-24 text-center">
+      <div className="inline-block w-8 h-8 border-4 border-bh-black border-t-bh-red animate-spin" />
+    </div>
+  )
+}
 
 function App() {
   const [snapshot, setSnapshot] = useState(null)
@@ -53,6 +61,9 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-bh-bg text-bh-fg font-body">
+      <a href="#generator" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-bh-yellow focus:text-bh-black focus:font-bold focus:border-2 focus:border-bh-black">
+        Skip to Generator
+      </a>
       <FloatingShapes />
 
       <HeroSection />
@@ -61,7 +72,9 @@ function App() {
       <EmbeddingSection snapshot={snapshot} />
       <AttentionSection snapshot={snapshot} />
       <LossGradientSection snapshot={snapshot} />
-      <TrainingSection />
+      <Suspense fallback={<SectionFallback />}>
+        <TrainingSection />
+      </Suspense>
       <GeneratorSection snapshot={snapshot} />
       <HowItWorksSection />
       <ArchitectureSection />
