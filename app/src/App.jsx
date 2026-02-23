@@ -7,6 +7,7 @@ import EmbeddingSection from './components/EmbeddingSection'
 import AttentionSection from './components/AttentionSection'
 import LossGradientSection from './components/LossGradientSection'
 const TrainingSection = lazy(() => import('./components/TrainingSection'))
+const LearnSection = lazy(() => import('./components/learn/LearnSection'))
 import GeneratorSection from './components/GeneratorSection'
 import HowItWorksSection from './components/HowItWorksSection'
 import ArchitectureSection from './components/ArchitectureSection'
@@ -78,6 +79,9 @@ function App() {
       <GeneratorSection snapshot={snapshot} />
       <HowItWorksSection />
       <ArchitectureSection />
+      <Suspense fallback={<SectionFallback />}>
+        <LearnSection />
+      </Suspense>
       <FooterSection />
 
       {loadError && (
